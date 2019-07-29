@@ -16,13 +16,18 @@ class BasicInfoForm extends Component{
     render(){
         return(
             <div>
-                <h1>BInfo</h1>
+                < form className='MultiForm-form'> 
+                    <h1>BInfo</h1>
                 <input type='text' name='firstName' value={this.props.values.firstName}
                  onChange={this.handleChange} />
+                 <br/>
                 <input type='text' name='lastName' value={this.props.values.lastName}
                  onChange={this.handleChange} />
+                 <br/>
                 <button onClick={this.handleNext}>Continue</button>
                 <button onClick={this.handlePrev}>Go Back</button>
+                </form>
+                
             </div>
         )
     }

@@ -3,7 +3,7 @@ import BasicInfoForm from './BasicInfoForm';
 import PersonalInfoForm from './PersonalInfoForm';
 import Success from './Success';
 import Confirm from './Confirm';
-
+import './MultiForm.css';
 class MultiForm extends Component{
     constructor(props){
         super(props);
@@ -41,12 +41,13 @@ class MultiForm extends Component{
         switch(stage){
             case 1:
                 return(
+                    <div className='MultiForm'>
                     <BasicInfoForm 
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     changeInput={this.changeInput}
                     values={values}
-                    />
+                    /></div>
                 );
             case 2:
                 return(
